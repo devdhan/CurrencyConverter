@@ -26,23 +26,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
-        android:text="Currency Converter"
-        android:textSize="25sp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="@font/poppins_bold"
-        android:textColor="#1F2261"
-        android:lineHeight="29sp"
-        android:textAlignment="center"
         android:gravity="center_horizontal|top"
+        android:lineHeight="29sp"
+        android:text="Currency Converter"
+        android:textColor="#1F2261"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/poppins_medium"
         android:lineHeight="19sp"
         android:text="Check live rates, set rate alerts, receive notifications and more."
@@ -67,6 +70,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="top"
+        android:lineHeight="18sp"
+        android:text="Amount"
+        android:textColor="#989898"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
+
+    <ImageView
+        android:id="@+id/convertbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/group_5"
+        android:layout_marginTop="105dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="@id/rectangle_1"
+        app:layout_constraintEnd_toEndOf="@id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@id/rectangle_1"
+        />
+
+    <TextView
+        android:id="@+id/convertedamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="top"
+        android:lineHeight="18sp"
+        android:text="Converted amount"
+        android:textColor="#989898"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_1"
+        app:layout_constraintTop_toBottomOf="@+id/convertbtn" />
 
     <TextView
         android:id="@+id/exchange"
@@ -97,5 +150,4 @@
         android:text="1 SGD = 0.7367 USD"
         android:textColor="#000000"/>
 
-    
 </androidx.constraintlayout.widget.ConstraintLayout>
