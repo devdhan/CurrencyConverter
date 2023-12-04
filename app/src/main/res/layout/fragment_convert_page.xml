@@ -93,7 +93,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:elevation="4dp"
+        android:hint="Base Currency"
         app:layout_constraintStart_toStartOf="@+id/amount"
         app:layout_constraintTop_toBottomOf="@+id/amount">
 
@@ -102,8 +104,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:singleLine="true"
             android:text="USD" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -111,14 +113,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/group_5"
-        android:layout_marginTop="105dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:elevation="4dp"
         app:layout_constraintStart_toStartOf="@id/rectangle_1"
         app:layout_constraintEnd_toEndOf="@id/rectangle_1"
         app:layout_constraintTop_toTopOf="@id/rectangle_1"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_1"/>
 
     <TextView
         android:id="@+id/convertedamount"
@@ -127,7 +128,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:elevation="4dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="top"
@@ -137,6 +138,25 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/rectangle_1"
         app:layout_constraintTop_toBottomOf="@+id/convertbtn" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        android:hint="Quote Currency"
+        app:layout_constraintStart_toStartOf="@+id/convertedamount"
+        app:layout_constraintTop_toBottomOf="@+id/convertedamount">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="USD" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/exchange"
