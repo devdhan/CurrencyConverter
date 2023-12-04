@@ -13,5 +13,11 @@ class ConvertPage : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_convert_page, container, false)
+
+//        val currency = resources.getStringArray(R.array.Currency)
+//        val arrayadapter = ArrayAdapter(requireContext(), R.layout.currency_item, currency)
+//        binding.autoCompleteTextview.setAdapter(arrayadapter)
+
+
     }
 }
