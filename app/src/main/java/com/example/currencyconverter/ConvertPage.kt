@@ -25,5 +25,4 @@ class ConvertPage : Fragment() {
         return binding.root
 
     }
-
 }

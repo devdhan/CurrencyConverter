@@ -8,7 +8,6 @@
     android:clipToOutline="true"
     android:background="#F7F7F7">
 
-
     <View
         android:id="@+id/ellipse_2"
         android:layout_width="0dp"
@@ -33,7 +32,7 @@
         android:gravity="center_horizontal|top"
         android:lineHeight="29sp"
         android:text="@string/currency_converter"
-        android:textColor="#1F2261"
+        android:textColor="@color/convert_text"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +49,7 @@
         android:lineHeight="19sp"
         android:text="@string/check_live_rates"
         android:textAlignment="center"
-        android:textColor="#808080"
+        android:textColor="@color/rate_color"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,18 +83,19 @@
         android:gravity="top"
         android:lineHeight="18sp"
         android:text="@string/amount"
-        android:textColor="#989898"
+        android:textColor="@color/amount"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/rectangle_1"
         app:layout_constraintTop_toTopOf="@+id/rectangle_1" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
-        android:hint="Base Currency"
+        android:hint="@string/base_currency"
         app:layout_constraintStart_toStartOf="@+id/amount"
         app:layout_constraintTop_toBottomOf="@+id/amount">
 
@@ -105,7 +105,33 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:singleLine="true"
-            android:text="USD" />
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20sp"
+            android:textColor="#26278D"
+            android:lineHeight="23sp"
+            android:text="@string/currency_name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:elevation="4dp"
+        android:layout_marginEnd="20dp"
+        android:background="#EFEFEF"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:textColor="#3C3C3C"
+            android:lineHeight="23sp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="1000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -134,18 +160,19 @@
         android:gravity="top"
         android:lineHeight="18sp"
         android:text="@string/converted_amount"
-        android:textColor="#989898"
+        android:textColor="@color/amount"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/rectangle_1"
         app:layout_constraintTop_toBottomOf="@+id/convertbtn" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/convertedamt"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
-        android:hint="Quote Currency"
+        android:hint="@string/quote_currency"
         app:layout_constraintStart_toStartOf="@+id/convertedamount"
         app:layout_constraintTop_toBottomOf="@+id/convertedamount">
 
@@ -155,7 +182,33 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:singleLine="true"
-            android:text="USD" />
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20sp"
+            android:textColor="#26278D"
+            android:lineHeight="23sp"
+            android:text="@string/currencyconverted_name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:elevation="4dp"
+        android:layout_marginEnd="20dp"
+        android:background="#EFEFEF"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
+        app:layout_constraintTop_toTopOf="@+id/convertedamt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:textColor="#3C3C3C"
+            android:lineHeight="23sp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="1000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -171,7 +224,7 @@
         android:text="@string/indicative_exchange_rate"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"
-        android:textColor="#A1A1A1"/>
+        android:textColor="@color/rate_text"/>
 
     <TextView
         android:layout_width="0dp"
@@ -185,7 +238,7 @@
         android:lineHeight="21sp"
         android:gravity="top"
         android:text="@string/converted_rate"
-        android:textColor="#000000"/>
+        android:textColor="@color/black"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,10 @@
     <string name="converted_amount">Converted amount</string>
     <string name="indicative_exchange_rate">Indicative Exchange Rate</string>
     <string name="converted_rate">1 SGD = 0.7367 USD</string>
+    <string name="base_currency">Base Currency</string>
+    <string name="currency_name">USD</string>
+    <string name="currencyconverted_name">USD</string>
+    <string name="quote_currency">Quote Currency</string>
     <string-array name="Currency">
         <item>ADA</item>
         <item>AED</item>
