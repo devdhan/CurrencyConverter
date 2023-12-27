@@ -15,6 +15,7 @@ class ConvertPage : Fragment() {
         val currency = resources.getStringArray(R.array.Currency)
         val arrayadapter = ArrayAdapter(requireContext(), R.layout.currency_item, currency)
         binding.autoCompleteTextView.setAdapter(arrayadapter)
+        binding.autoCompleteTextView2.setAdapter(arrayadapter)
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

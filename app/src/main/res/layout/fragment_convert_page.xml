@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ConvertPage"
     android:clipToOutline="true"
+    android:theme="@style/AppTheme"
     android:background="#F7F7F7">
 
     <View
@@ -77,7 +78,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:elevation="4dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="top"
@@ -95,13 +96,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
+        app:boxStrokeColor="#3C3C3C"
+        app:boxStrokeWidth="0.5dp"
+        android:textColorHint="@color/black"
         android:hint="@string/base_currency"
         app:layout_constraintStart_toStartOf="@+id/amount"
         app:layout_constraintTop_toBottomOf="@+id/amount">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:singleLine="true"
@@ -119,6 +123,8 @@
         android:elevation="4dp"
         android:layout_marginEnd="20dp"
         android:background="#EFEFEF"
+        app:boxStrokeColor="#26278D"
+        app:boxStrokeWidth="1dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout">
 
@@ -128,6 +134,7 @@
             android:singleLine="true"
             android:maxLines="1"
             android:textSize="20sp"
+            android:inputType="number"
             android:textColor="#3C3C3C"
             android:lineHeight="23sp"
             android:fontFamily="@font/poppins_medium"
@@ -154,7 +161,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
         android:elevation="4dp"
         android:fontFamily="@font/poppins_medium"
         android:gravity="top"
@@ -170,23 +176,28 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
         android:elevation="4dp"
+        app:boxStrokeColor="#3C3C3C"
+        app:boxStrokeWidth="0.5dp"
+        android:textColorHint="@color/black"
         android:hint="@string/quote_currency"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_1"
         app:layout_constraintStart_toStartOf="@+id/convertedamount"
         app:layout_constraintTop_toBottomOf="@+id/convertedamount">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:singleLine="true"
             android:fontFamily="@font/poppins_medium"
-            android:textSize="20sp"
-            android:textColor="#26278D"
             android:lineHeight="23sp"
-            android:text="@string/currencyconverted_name" />
+            android:singleLine="true"
+            android:text="@string/currency_name"
+            android:textColor="#26278D"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -196,6 +207,8 @@
         android:elevation="4dp"
         android:layout_marginEnd="20dp"
         android:background="#EFEFEF"
+        app:boxStrokeColor="#26278D"
+        app:boxStrokeWidth="1dp"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
         app:layout_constraintTop_toTopOf="@+id/convertedamt">
 
@@ -206,6 +219,7 @@
             android:maxLines="1"
             android:textSize="20sp"
             android:textColor="#3C3C3C"
+            android:inputType="number"
             android:lineHeight="23sp"
             android:fontFamily="@font/poppins_medium"
             android:hint="1000" />
@@ -220,7 +234,7 @@
         app:layout_constraintEnd_toEndOf="@id/rectangle_1"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="15dp"
         android:text="@string/indicative_exchange_rate"
         android:fontFamily="@font/poppins_medium"
         android:textSize="16sp"
@@ -232,13 +246,11 @@
         app:layout_constraintStart_toStartOf="@+id/exchange"
         app:layout_constraintEnd_toEndOf="@+id/exchange"
         app:layout_constraintTop_toBottomOf="@+id/exchange"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_medium"
         android:textSize="18sp"
         android:lineHeight="21sp"
         android:gravity="top"
         android:text="@string/converted_rate"
         android:textColor="@color/black"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
